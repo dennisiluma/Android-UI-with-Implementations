@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import java.util.zip.Inflater
 
 class PartnerSectionRecycler : RecyclerView.Adapter<PartnerSectionRecycler.ItemsHolder>() {
-    private val shipping_route = arrayOf("AliExpress","AviaSales", "Booking and Hotels", "AliExpress", "AviaSales")
+    private val shipping_route = arrayOf("AliExpress", "AviaSales", "Booking", "UPSExpress", "JumiaSales")
     private  val percentage = arrayOf("4.4%","98%","54%","21%","1%")
     private  val product_category = arrayOf("Cloths and Shoes", "Tickets and Travel", "Tickets and Travel", "Cloths and Shoes", "Cloths and Shoes")
     private val  shopping_icon = intArrayOf(R.drawable.ic_bag, R.drawable.ic_bag, R.drawable.ic_bag, R.drawable.ic_bag, R.drawable.ic_bag)
@@ -28,6 +28,7 @@ class PartnerSectionRecycler : RecyclerView.Adapter<PartnerSectionRecycler.Items
             percentage = itemView.findViewById(R.id.percentage)
             productCategory = itemView.findViewById(R.id.product_category)
             shoppingicon = itemView.findViewById(R.id.shopping_icon)
+
 
         }
     }
@@ -51,4 +52,5 @@ class PartnerSectionRecycler : RecyclerView.Adapter<PartnerSectionRecycler.Items
         holder.shoppingicon.setImageResource(shopping_icon[position])
 
     }
+
 }

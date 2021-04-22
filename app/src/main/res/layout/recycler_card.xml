@@ -1,47 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_marginTop="30dp"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="10dp"
+
+        app:cardPreventCornerOverlap="false"
         android:id="@+id/recyclerview_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/shipping_route"
-        android:text="AliExpress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/shipping_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/montserrat"
+            android:padding="5dp"
+            android:text="AliExpress"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
+            android:padding="5dp"
             android:id="@+id/percentage"
             android:text="From 4%"
             android:layout_marginTop="20dp"
+            android:fontFamily="@font/montserrat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
         <TextView
+            android:padding="3dp"
             android:id="@+id/product_category"
             android:text="Cloths and Shoes"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/montserrat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-    <ImageView
-        android:id="@+id/shopping_icon"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_bag"/>
+        <ImageView
+            android:id="@+id/shopping_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_bag"
+            app:tint="@color/red" />
 
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

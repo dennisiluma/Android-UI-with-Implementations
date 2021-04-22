@@ -4,4 +4,6 @@
     <string name="utility_description">utility_but</string>
     <string name="mobile_description">mobile_but</string>
     <string name="qrcode_description">qrcode_but</string>
+    <string name="partners">Partners</string>
+    <string name="special_offers">Special Offers</string>
 </resources>

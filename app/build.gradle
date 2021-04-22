@@ -46,7 +46,7 @@ dependencies {
     //viewpager 2 implementation
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     //circular indicator
-    implementation 'me.relex:circleindicator:2.1.6'
+    implementation 'me.relex:circleindicator:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //recycler view dependency
     implementation "androidx.recyclerview:recyclerview:1.2.0"
