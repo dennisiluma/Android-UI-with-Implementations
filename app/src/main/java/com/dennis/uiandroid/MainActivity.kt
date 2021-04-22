@@ -66,11 +66,8 @@ class MainActivity : AppCompatActivity() {
 
         val viewpager = findViewById<ViewPager2>(R.id.view_pager2)
         // fill data into the viewpager class
-        var data = arrayListOf<DataViewPager>();
-        data.add(DataViewPager("Dennis", "Debit Card", "$23,095", "2562", "VISA", R.color.blue))
-        data.add(DataViewPager("Dapo", "Credit Card", "$93,095", "1562", "VISA", R.color.red))
-        data.add(DataViewPager("Ola", "Debit Card", "$63,095", "0567", "VISA", R.color.green))
-        data.add(DataViewPager("Zambia", "credit Card", "$13,095", "4562", "VISA", R.color.red))
+        var data = DummyDataGenerator.viewPagerData()
+
         viewpager.adapter = CardViewAdapter(this, data)
         viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 

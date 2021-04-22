@@ -62,131 +62,135 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/view_pager2"
-                app:layout_constraintBottom_toTopOf="@+id/indicator3"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar_nav"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_height="0dp"
-                android:layout_width="0dp" />
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/indicator3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_nav" />
 
 
-            <me.relex.circleindicator.CircleIndicator3
-                android:id="@+id/indicator3"
-                android:layout_width="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/view_pager2"
-                app:layout_constraintBottom_toTopOf="@+id/linearlayout_image_button"
-                android:layout_height="20dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/background" />
+    <me.relex.circleindicator.CircleIndicator3
+        android:id="@+id/indicator3"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/background"
+        app:layout_constraintBottom_toTopOf="@+id/linearlayout_image_button"
+        app:layout_constraintTop_toBottomOf="@+id/view_pager2" />
 
+<!--linear layout for middle button starts here-->
+    <LinearLayout
+        android:id="@+id/linearlayout_image_button"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/framelayout_home"
+        app:layout_constraintTop_toBottomOf="@+id/indicator3">
 
-            <LinearLayout
-                android:id="@+id/linearlayout_image_button"
-                android:layout_width="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/indicator3"
-                app:layout_constraintBottom_toTopOf="@+id/framelayout_home"
-                android:layout_height="0dp"
-                android:orientation="horizontal"
-                android:padding="15dp">
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_transfer" />
 
-                <ImageButton
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_transfer" />
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_mobile" />
 
-                <ImageButton
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_mobile" />
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_utility" />
 
-                <ImageButton
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_utility" />
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_qrcode" />
+    </LinearLayout>
+    <!--linear layout for middle button starts here-->
+<!--frameout for two middle card starts here-->
+    <FrameLayout
+        android:id="@+id/framelayout_home"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/white"
+        android:paddingHorizontal="2dp"
+        app:layout_constraintBottom_toTopOf="@id/framelayout_recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearlayout_image_button">
 
-                <ImageButton
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_marginLeft="20dp"
-                    android:src="@drawable/ic_qrcode" />
-            </LinearLayout>
+        <TextView
+            android:id="@+id/special_offers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:text="@string/special_offers"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <FrameLayout
-                android:id="@+id/framelayout_home"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:backgroundTint="@color/white"
-                android:paddingHorizontal="2dp"
-                app:layout_constraintBottom_toTopOf="@id/framelayout_recyclerView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/linearlayout_image_button">
+        <ImageView
+            android:id="@+id/framelayout_home_cardView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            app:srcCompat="@drawable/ic_creditcard_b" />
 
-                <TextView
-                    android:id="@+id/special_offers"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="20dp"
-                    android:text="@string/special_offers"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/framelayout_home_cardView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"
+            app:srcCompat="@drawable/ic_creditcard_a" />
 
-                <ImageView
-                    android:id="@+id/framelayout_home_cardView1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="0dp"
-                    app:srcCompat="@drawable/ic_creditcard_b" />
+    </FrameLayout>
 
-                <ImageView
-                    android:id="@+id/framelayout_home_cardView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="180dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="0dp"
-                    app:srcCompat="@drawable/ic_creditcard_a" />
+    <!--frameout for two middle card ends here-->
+<!--framelayout for partner and recycler view starts here-->
+    <FrameLayout
+        android:id="@+id/framelayout_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/framelayout_home">
 
-            </FrameLayout>
+        <TextView
+            android:id="@+id/partners"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/partners"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-            <FrameLayout
-                android:id="@+id/framelayout_recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:padding="10dp"
-                app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/framelayout_home">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="0dp"
+            android:clipChildren="false"
+            android:clipToPadding="false" />
 
-                <TextView
-                    android:id="@+id/partners"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="50dp"
-                    android:paddingHorizontal="20dp"
-                    android:text="@string/partners"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/home_recycler_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:clipToPadding="false"
-                    android:clipChildren="false"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginBottom="0dp" />
-
-            </FrameLayout>
-
+    </FrameLayout>
+    <!--framelayout for partner and recycler view ends here-->
+    <!--bottom navigation start-->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
@@ -194,7 +198,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
         app:cornerRadius="10dp"
-        app:itemTextColor="@color/btn_tx_cl"
+        app:itemTextColor="@color/button_text_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -202,5 +206,5 @@
         app:layout_constraintTop_toBottomOf="@+id/framelayout_recyclerView"
         app:menu="@menu/bottom_nav_menu"
         app:strokeWidth="5dp" />
-
+    <!--buttom navigation ends-->
 </androidx.constraintlayout.widget.ConstraintLayout>

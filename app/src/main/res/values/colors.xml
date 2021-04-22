@@ -13,5 +13,5 @@
     <color name="background">#E5E5E5</color>
     <color name="brown">#2F394B</color>
     <color name="offwhite">#FAFAFA</color>
-    <color name="btn_tx_cl">#888888</color>
+    <color name="button_text_color">#888888</color>
 </resources>

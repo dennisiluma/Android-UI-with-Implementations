@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.util.zip.Inflater
 
 class PartnerSectionRecycler : RecyclerView.Adapter<PartnerSectionRecycler.ItemsHolder>() {
     private val shipping_route = arrayOf("AliExpress", "AviaSales", "Booking", "UPSExpress", "JumiaSales")
@@ -28,7 +27,6 @@ class PartnerSectionRecycler : RecyclerView.Adapter<PartnerSectionRecycler.Items
             percentage = itemView.findViewById(R.id.percentage)
             productCategory = itemView.findViewById(R.id.product_category)
             shoppingicon = itemView.findViewById(R.id.shopping_icon)
-
 
         }
     }
